@@ -80,13 +80,13 @@ const apps = [
   { name: "Camera", icon: "camera", color: "#8E8E93" },
   { name: "Music", icon: "musical-notes", color: "#FF3B30" },
   { name: "Mail", icon: "mail", color: "#007AFF" },
-  { name: "Calendar", icon: "calendar", color: "#FF3B30" },
+  { name: "Gallery", icon: "images", color: "#5856D6" }, // Menambahkan ikon Galeri
   { name: "Settings", icon: "settings", color: "#8E8E93" },
   { name: "Maps", icon: "location", color: "#34C759" },
   { name: "Shopping", icon: "bag", color: "#FF9500" },
   { name: "Clock", icon: "time", color: "#000000" },
   { name: "Calculator", icon: "calculator", color: "#FF9500" },
-  { name: "Photos", icon: "images", color: "#FF3B30" },
+  { name: "Photos", icon: "images", color: "#FF3B30" }, // Ini mungkin duplikat dengan Gallery, bisa dihapus jika Gallery menggantikan Photos
   { name: "Videos", icon: "videocam", color: "#5856D6" },
   { name: "Spotify", icon: "headset", color: "#1DB954" },
   { name: "Safari", icon: "globe", color: "#007AFF" },
@@ -123,6 +123,11 @@ export default function HomeScreen() {
     Vibration.vibrate(100)
     if (appName === "Music" || appName === "Spotify") {
       router.push("/music")
+    } else if (appName === "Calculator") {
+      router.push("/calculator")
+    } else if (appName === "Gallery" || appName === "Photos") {
+      // Menambahkan navigasi untuk Gallery
+      router.push("/gallery")
     }
   }
 

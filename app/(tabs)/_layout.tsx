@@ -20,6 +20,18 @@ export default function TabLayout() {
           title: "Music Player",
         }}
       />
+      <Tabs.Screen
+        name="calculator"
+        options={{
+          title: "Calculator",
+        }}
+      />
+      <Tabs.Screen
+        name="gallery" // Menambahkan layar galeri baru
+        options={{
+          title: "Gallery",
+        }}
+      />
     </Tabs>
   )
 }

@@ -110,7 +110,7 @@ export default function MusicPlayerScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor="#0A0A0A" />
-      <ImageBackground source={require("../../assets/wallpaper.jpg")} style={styles.background} resizeMode="cover">
+      <ImageBackground source={require("../../assets/about-you.jpg")} style={styles.background} resizeMode="cover">
         <View style={styles.overlay}>
           <View style={styles.header}>
             <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
